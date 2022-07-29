@@ -1,4 +1,4 @@
-# nodejs-typescript-express-static-site
+# nodejs-typescript-web-server
 
 This template uses Node.js, TypeScript, and Express to generate and run a static website. Code goes in the src/app and src/public folders and tests follow the same structure in the src/tests folder.
 
