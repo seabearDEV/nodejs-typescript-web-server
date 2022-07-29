@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "nodejs-typescript-express-static-site"
+		"url": "https://github.com/devKory/nodejs-typescript-express-static-site"
 	},
 	"author": "Kory Hoopes",
 	"bugs": {
