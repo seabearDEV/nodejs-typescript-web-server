@@ -4,7 +4,9 @@
 	"description": "Node.js static website using TypeScript and Express",
 	"main": "dist/app/index.js",
 	"scripts": {
-		"build": "rimraf ./dist && tsc && sass ./src/public/css:./dist/public/css && cp -r ./src/public/html/* ./dist/public",
+		"prebuild": "rimraf ./dist",
+		"build": "tsc && sass ./src/public/css:./dist/public/css && cp -r ./src/public/html/* ./dist/public",
+		"postbuild": "cp ./node_modules/bulma/css/bulma.min.css ./dist/public/css",
 		"predev": "npm run build",
 		"dev": "NODE_ENV=development nodemon",
 		"predev:watch": "npm run build",
@@ -17,7 +19,7 @@
 		"type": "git",
 		"url": "https://github.com/devKory/nodejs-typescript-express-static-site"
 	},
-	"author": "Kory Hoopes",
+	"author": "seabearDEV, Kory Hoopes",
 	"bugs": {
 		"url": "https://github.com/devKory/nodejs-typescript-express-static-site/issues"
 	},
@@ -34,6 +36,7 @@
 		"typescript": "^5.0.4"
 	},
 	"dependencies": {
+		"bulma": "^0.9.4",
 		"express": "^4.18.1"
 	}
 }
