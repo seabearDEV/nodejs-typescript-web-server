@@ -104,3 +104,7 @@ dist
 .tern-port
 src/.DS_Store
 .DS_Store
+
+# Replit
+.replit
+.nix
