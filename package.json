@@ -5,9 +5,7 @@
 	"description": "Node.js static website using TypeScript and Express",
 	"main": "dist/app/index.js",
 	"scripts": {
-		"prebuild": "rimraf ./dist",
-		"build": "tsc && sass ./src/public/css:./dist/public/css && cp -r ./src/public/html/* ./dist/public",
-		"postbuild": "cp ./node_modules/bulma/css/bulma.min.css ./dist/public/css",
+		"build": "node ./utilities/build.js",
 		"predev": "npm run build",
 		"dev": "NODE_ENV=development nodemon",
 		"predev:watch": "npm run build",
