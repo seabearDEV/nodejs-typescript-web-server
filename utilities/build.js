@@ -4,7 +4,7 @@ const buildConfig = {
     async: [
         {
             name: 'removeDist',
-            command: 'rm -fr ./dist',
+            command: 'rm -rf ./dist',
             message: 'The ./dist folder has been deleted.'
         },
         {
@@ -34,6 +34,7 @@ const buildConfig = {
 
 buildConfig.async.forEach(config => {
     execSync(config.command);
+
     console.log(config.message);
 });
 buildConfig.sync.forEach(config => {
@@ -42,7 +43,7 @@ buildConfig.sync.forEach(config => {
             console.error(`Error: ${err}`);
             return;
         }
-
+        
         console.log(config.message);
     });
 });
