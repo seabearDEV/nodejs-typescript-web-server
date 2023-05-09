@@ -1,5 +1,6 @@
 {
 	"name": "nodejs-typescript-web-server",
+	"type": "module",
 	"version": "1.0.0",
 	"description": "Node.js static website using TypeScript and Express",
 	"main": "dist/app/index.js",
