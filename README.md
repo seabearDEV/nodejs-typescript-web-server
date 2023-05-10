@@ -20,3 +20,4 @@ This template uses Node.js, TypeScript, and Express to generate and run a static
 - **dev:watch**: Cleans dist folder, copies all html to the dist folder, transpiles SCSS into CSS, transpiles all TypeScript files, and then watches for changes
 - **prod**: Sets Node environment to production, cleans dist folder, transpiles all TypeScript files, removes tests folder from dist, and executes dist/app/index.js
 - **test**: Cleans dist folder, transpiles all TypeScript files, and runs the JestJS testing framework
+- **update**: Updates all dependencies in the project to their latest versions
