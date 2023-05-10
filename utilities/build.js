@@ -1,7 +1,7 @@
 import { exec, execSync } from 'child_process';
 
 const buildConfig = {
-    async: [
+    sync: [
         {
             name: 'removeDist',
             command: 'rm -rf ./dist',
@@ -18,7 +18,7 @@ const buildConfig = {
             message: 'The SASS compiler has run successfully.'
         }
     ],
-    sync: [   
+    async: [   
         {
             name: 'copyHTML',
             command: 'cp -r ./src/public/html/* ./dist/public',
@@ -32,12 +32,12 @@ const buildConfig = {
     ]
 };
 
-buildConfig.async.forEach(config => {
+buildConfig.sync.forEach(config => {
     execSync(config.command);
 
     console.log(config.message);
 });
-buildConfig.sync.forEach(config => {
+buildConfig.async.forEach(config => {
     exec(config.command, (err) => {
         if (err) {
             console.error(`Error: ${err}`);
