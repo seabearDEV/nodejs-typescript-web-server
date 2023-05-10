@@ -6,13 +6,13 @@ const packageJSON = JSON.parse(
     await readFile(`${cwd()}/package.json`)
 );
 
-let packages = [];
+let dependencies = [];
 
-function extractDependencies(items) {
-    for (const item in items) {
-        packages.push({
+function extractDependencies(packages) {
+    for (const item in packages) {
+        dependencies.push({
             name: item,
-            version: items[item]
+            version: packages[item]
         });
     }
 }
@@ -24,4 +24,12 @@ if (packageJSON.dependencies) {
     extractDependencies(packageJSON.dependencies);
 }
 
-console.log(packages);
+dependencies.forEach(dependency => {
+    exec(`npm install ${dependency.name}@latest`, (err, stdout) => {
+        if (err) {
+            console.error(`Error: ${err}`);
+            return;
+        }
+        console.log(stdout);
+    });
+});

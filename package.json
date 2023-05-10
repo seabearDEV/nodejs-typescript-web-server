@@ -12,7 +12,8 @@
 		"dev:watch": "concurrently \"chokidar './src/public/html' -c 'npm run build'\" \"sass --watch ./src/public/css:./dist/public/css\" \"tsc --watch\"",
 		"preprod": "npm run build && rm -rf dist/tests",
 		"prod": "NODE_ENV=production node dist/app/index.js",
-		"test": "npm run build && jest --verbose ./dist"
+		"test": "npm run build && jest --verbose ./dist",
+		"update": "node ./utilities/dependencies-update.js"
 	},
 	"repository": {
 		"type": "git",
@@ -35,6 +36,6 @@
 	},
 	"dependencies": {
 		"bulma": "^0.9.4",
-		"express": "^4.18.1"
+		"express": "^4.18.2"
 	}
 }
