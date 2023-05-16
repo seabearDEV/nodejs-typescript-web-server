@@ -14,3 +14,5 @@ web.server.use(express.static("./dist/public"));
 web.server.listen(web.port, () => {
     console.log(`Your website is listening on port ${web.port}...`);
 });
+
+export { web };
