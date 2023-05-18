@@ -15,9 +15,9 @@ This template uses Node.js, TypeScript, and Express to generate and run a static
 
 ### Scripts (npm run)
 
-- **build**: Deletes dist folder, transpiles TypeScript and Sass files, copies all CSS/HTML/JS into new dist folder
+- **build**: Deletes dist folder, transpiles TypeScript and Sass files, and copies all CSS/HTML/JS into new dist folder
 - **dev**: Runs the build script, sets Node environment to development, and executes dist/app/index.js
-- **dev:watch**: Watches the /src directory for any file changes and runs **build** when necessary
+- **dev:watch**: Watches the /src directory for any file changes and runs the build when necessary
 - **prod**: Runs the build script, sets Node environment to production, removes tests folder from dist, and executes dist/app/index.js
 - **test**: Runs the build script and then runs JestJS testing framework against the /src directory
 - **update**: Updates all dependencies in the project to their latest versions
