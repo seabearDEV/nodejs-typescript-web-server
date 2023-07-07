@@ -1,0 +1,25 @@
+{
+	"name": "project-genesis",
+	"version": "1.0.0",
+	"description": "A starting place for applications written in TypeScript for Node.js",
+	"author": {
+		"name": "Kory Hoopes",
+		"email": "kory@seabear.dev",
+		"github-user": "seabearDEV"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/seabearDEV/project-genesis"
+	},
+	"bugs": {
+		"url": "https://github.com/seabearDEV/project-genesis/issues"
+	},
+	"type": "module",
+	"main": "dist/app/index.js",
+	"scripts": {
+		"cleanup": "node ./utilities/cleanup.js",
+		"genesis": "node ./utilities/genesis.js"
+	},
+	"dependencies": {},
+	"devDependencies": {}
+}

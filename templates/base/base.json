@@ -1,0 +1,51 @@
+{
+	"build-js": {
+		"syncCommands": [
+			{
+				"description": "Remove the /dist folder",
+				"run": "rm -rf ./dist",
+				"message": "The /dist folder has been deleted."
+			},
+			{
+				"description": "Run the TypeScript Compiler (tsc)",
+				"run": "tsc",
+				"message": "The TypeScript Compiler has run successfully."
+			}
+		]
+	},
+	"genesis-js": {
+		"syncCommands": [
+			{
+				"description": "Refresh /src directory",
+				"run": "rm -rf ./src && mkdir ./src",
+				"message": "The /dist folder has been deleted."
+			},
+			{
+				"description": "Copy base template files to the /src folder",
+				"run": "cp -r ./templates/base/src/* ./src",
+				"message": "Base template files have been copied to the /src folder."
+			}
+		]
+	},
+	"package-json": {
+		"scripts": {
+			"build": "node ./utilities/build.js",
+			"cleanup": "node ./utilities/cleanup.js",
+			"predev": "npm run build",
+			"dev": "NODE_ENV=development nodemon",
+			"predev:watch": "npm run build",
+			"dev:watch": "tsc --watch",
+			"genesis": "node ./utilities/genesis.js",
+			"test": "npm run build && jest --verbose ./dist",
+			"test:watch": "npm run build && NODE_OPTIONS=--experimental-vm-modules jest --verbose --watchAll ./dist",
+			"tsc": "tsc",
+			"update": "node ./utilities/dependencies-update.js"
+		},
+		"devDependencies": [
+			"@types/jest",
+			"jest",
+			"nodemon",
+			"typescript"
+		]
+	}
+}

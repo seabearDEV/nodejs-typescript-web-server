@@ -1,7 +1,10 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "module": "esnext"
-  }
+    "module": "esnext",
+    "moduleResolution": "NodeNext"
+  },
+  "exclude": [
+    "templates"
+  ]
 }
