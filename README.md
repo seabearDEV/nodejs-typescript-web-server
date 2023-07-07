@@ -4,7 +4,7 @@ The goal of **project-genesis** is to be a starting place for applications writt
 
 ## Instructions
 
-* Run "**npm run genesis** without any flags to generate a base TypeScript application
+* Run "**npm run genesis**" without any flags to generate a base TypeScript application
   * "npm run genesis base" generates a base TypeScript Node.js application
   * "npm run genesis web-server" generates a TypeScript Node.js web server using Express.js
 * Run "**npm run dev:watch**" to start the HTML, SCSS, and TypeScript compilers in watch mode
