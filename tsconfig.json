@@ -1,10 +1,8 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "module": "esnext",
-    "moduleResolution": "NodeNext"
-  },
-  "exclude": [
-    "templates"
-  ]
+	"compilerOptions": {
+		"outDir": "./dist",
+		"module": "esnext",
+		"moduleResolution": "NodeNext"
+	},
+	"exclude": ["templates"]
 }

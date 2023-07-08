@@ -36,14 +36,9 @@
 			"predev:watch": "npm run build",
 			"dev:watch": "tsc --watch",
 			"genesis": "node ./utilities/genesis.js",
-			"test": "npm run build && jest --verbose ./dist",
-			"test:watch": "npm run build && NODE_OPTIONS=--experimental-vm-modules jest --verbose --watchAll ./dist",
-			"tsc": "tsc",
 			"update": "node ./utilities/dependencies-update.js"
 		},
 		"devDependencies": [
-			"@types/jest",
-			"jest",
 			"nodemon",
 			"typescript"
 		]

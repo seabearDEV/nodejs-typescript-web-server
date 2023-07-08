@@ -45,25 +45,13 @@
 	},
 	"package-json": {
 		"scripts": {
-			"build": "node ./utilities/build.js",
-			"predev": "npm run build",
-			"dev": "NODE_ENV=development nodemon",
-			"predev:watch": "npm run build",
-			"dev:watch": "concurrently \"chokidar './src/public/html' -c 'npm run build'\" \"sass --watch ./src/public/css:./dist/public/css\" \"tsc --watch\"",
-			"test": "npm run build && jest --verbose ./dist",
-			"test:watch": "npm run build && NODE_OPTIONS=--experimental-vm-modules jest --verbose --watchAll ./dist",
-			"update": "node ./utilities/dependencies-update.js"
+			"dev:watch": "concurrently \"chokidar './src/public/html' -c 'npm run build'\" \"sass --watch ./src/public/css:./dist/public/css\" \"tsc --watch\""
 		},
 		"devDependencies": [
-			"@tsconfig/node20",
 			"@types/express",
-			"@types/jest",
 			"chokidar-cli",
 			"concurrently",
-			"jest",
-			"nodemon",
-			"sass",
-			"typescript"
+			"sass"
 		],
 		"dependencies": ["express"]
 	}
