@@ -17,7 +17,7 @@
 	"type": "module",
 	"main": "dist/app/index.js",
 	"scripts": {
-		"cleanup": "node ./utilities/cleanup.js",
+		"clean": "node ./utilities/clean.js",
 		"genesis": "node ./utilities/genesis.js"
 	},
 	"dependencies": {},

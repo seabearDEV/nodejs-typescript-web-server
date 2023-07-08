@@ -2,7 +2,7 @@ import { cwd } from 'process';
 import { exec, execSync } from 'child_process';
 import { readFile, writeFile } from 'fs/promises';
 
-const packageJSON = JSON.parse(await readFile(`${cwd()}/package.json.cleanup`));
+const packageJSON = JSON.parse(await readFile(`${cwd()}/package.json.clean`));
 const asyncCommands = {
     "group1": [
         {
